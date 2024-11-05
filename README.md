@@ -55,7 +55,10 @@ This project involves analyzing the sales performance of a retail store to uncov
 
 #### PowerBI for Visualisations
 
-https://1drv.ms/x/c/217a870815163ae5/ERv54YuXS3tEv3FNoumoox4BPkvC-WUqbWXU0JpxMZvoYw?e=IT4jfb
+https://1drv.ms/x/c/217a870815163ae5/ERv54YuXS3tEv3FNoumoox4BPkvC-WUqbWXU0JpxMZvoYw?e=g3qSo2
+
+``create database LitaProject_Mary
+select * from [dbo].[LITA Capstone_MaryAlabi]
 
 
 
