@@ -55,6 +55,8 @@ This project involves analyzing the sales performance of a retail store to uncov
 
 #### PowerBI for Visualisations
 
+https://1drv.ms/x/c/217a870815163ae5/ERv54YuXS3tEv3FNoumoox4BPkvC-WUqbWXU0JpxMZvoYw?e=IT4jfb
+
 
 
 
