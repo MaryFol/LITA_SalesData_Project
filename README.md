@@ -58,7 +58,111 @@ This project involves analyzing the sales performance of a retail store to uncov
 https://1drv.ms/x/c/217a870815163ae5/ERv54YuXS3tEv3FNoumoox4BPkvC-WUqbWXU0JpxMZvoYw?e=g3qSo2
 
 ```create database LitaProject_Mary
+select * from [dbo].[LITA Capstone_MaryAlabi]create database LitaProject_Mary
 select * from [dbo].[LITA Capstone_MaryAlabi]
+------ Total Sales for each product Category--------
+
+```select product, sum(quantity * unitprice) AS Total_Sales
+From [dbo].[LITA Capstone_MaryAlabi] Group By product
+
+
+-------Number of Sales transactions in each Region------
+
+```Select region,
+count (*) AS TransactionCount
+From [dbo].[LITA Capstone_MaryAlabi] 
+Group by region
+
+
+-----------Highest Selling Product by Total Sales Value
+
+```Select product,
+SUM(Quantity * UnitPrice) As TotalSales
+From [dbo].[LITA Capstone_MaryAlabi]
+Group By Product
+Order By 
+TotalSales DESC
+ OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY
+
+-------Total Revenue By Product-----
+
+```Select product,
+Sum(Quantity * UnitPrice) AS TotalRevenue
+From [dbo].[LITA Capstone_MaryAlabi]
+Group By Product
+
+
+--------Monthly sales totals for the current year--------
+
+```SELECT
+FORMAT(ORDERDATE, 'MM') AS Sales_Month,
+Sum(Quantity * UnitPrice) AS Monthly_Sales_Total
+FROM [dbo].[LITA Capstone_MaryAlabi]
+WHERE
+YEAR(OrderDate) = 2024
+GROUP BY
+FORMAT (OrderDate, 'MM')
+ORDER BY
+FORMAT(OrderDate, 'MM')
+
+
+-------Top 5 customers by total purchase amount--------
+
+```Select Top 5
+Customer_Id,
+SUM(Quantity * UnitPrice) 
+AS Total_Purchase_Amount
+FROM [dbo].[LITA Capstone_MaryAlabi]
+Group By Customer_Id
+Order By Total_Purchase_Amount DESC
+
+
+--------Percentage of total sales contributed by each region--------
+
+``` Select region,
+SUM(Quantity * UnitPrice) 
+AS Region_Sales_Total,
+   (SUM(Quantity * UnitPrice)* 100.0) / (SELECT SUM(Quantity * UnitPrice) 
+   FROM [dbo].[LITA Capstone_MaryAlabi])
+   AS Sales_Percentage
+   FROM [dbo].[LITA Capstone_MaryAlabi]
+   GROUP BY
+   Region
+  
+    
+  -------Products with no sales in the last quarter-----
+
+  ```SELECT Product 
+  FROM [dbo].[LITA Capstone_MaryAlabi]
+  GROUP BY Product
+  HAVING
+  SUM(CASE WHEN OrderDate >= '2024-01-01' AND OrderDate < '2024-04-01' 
+  THEN 1 ELSE 0 END
+
+  
+
+
+   
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+ 
 
 
 
