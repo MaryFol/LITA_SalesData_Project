@@ -1,3 +1,7 @@
+[LITA_SalesData_Project](lita-salesdata-project)
+[Project Overview](Project-Overview)
+[Data Description](Data-Description)
+
 # LITA_SalesData_Project
 This is the SalesDate Project, Where I worked on Excel, SQL and Power BI
 
