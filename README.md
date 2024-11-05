@@ -60,6 +60,7 @@ https://1drv.ms/x/c/217a870815163ae5/ERv54YuXS3tEv3FNoumoox4BPkvC-WUqbWXU0JpxMZv
 ```create database LitaProject_Mary
 select * from [dbo].[LITA Capstone_MaryAlabi]create database LitaProject_Mary
 select * from [dbo].[LITA Capstone_MaryAlabi]
+
 ------ Total Sales for each product Category--------
 
 ```select product, sum(quantity * unitprice) AS Total_Sales
@@ -138,6 +139,7 @@ AS Region_Sales_Total,
   HAVING
   SUM(CASE WHEN OrderDate >= '2024-01-01' AND OrderDate < '2024-04-01' 
   THEN 1 ELSE 0 END
+
 
   
 
